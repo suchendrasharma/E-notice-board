@@ -1,0 +1,20 @@
+
+  /* background-color: ; */
+
+
+  table {
+    width: 100%;
+  }
+  .user {
+    font-size: 50px;
+    margin: 100px 530px;
+  
+  }
+  
+  button {
+    margin: 100px 330px;
+    background-color: aqua;
+    align-self: auto;
+    justify-content: center;
+  }
+    

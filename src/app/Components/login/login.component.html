@@ -1,0 +1,36 @@
+<h1 class="heading01" style="color: aliceblue;">Welcome to e-notice board</h1>
+  <div class="align">
+    <div class="card">
+      <div class="head">
+        <div></div>
+        <a id="login" class="selected">Login</a>
+        <div></div>
+      </div>
+      <div class="tabs" >
+        <form class="form" [formGroup]="form" (ngSubmit)="form.valid && submit()">
+          <div class="inputs">
+            <div class="input">
+              <mat-form-field>
+                <input matInput placeholder="Enter your rollNo" formControlName="rollNo" type="text">
+                <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                <!-- <img src="img/user.svg"> -->
+              </mat-form-field>
+            </div>
+            <div class="input">
+              <mat-form-field>
+                <input matInput placeholder="Enter your password" type="password" formControlName="password">
+                <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? '' : ''}}</mat-icon> -->
+                <!-- </button> -->
+                <!--<img src="img/pass.svg">-->
+              </mat-form-field>
+            </div>
+              <mat-checkbox>Remember me</mat-checkbox>
+        
+              <button mat-raised-button class="submit" type="submit">Sign in</button>
+          </div>  
+        </form>
+      </div>
+    </div>
+  </div>
+
