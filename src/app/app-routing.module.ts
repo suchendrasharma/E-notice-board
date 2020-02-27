@@ -6,6 +6,11 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { NoticeboardComponent } from './Components/noticeboard/noticeboard.component';
 import { NoticeTableComponent } from './Components/notice-table/notice-table.component';
 import { FacultyLoginComponent } from './Components/faculty-login/faculty-login.component';
+import { AdminPanelComponent } from './Components/admin-panel/admin-panel.component';
+import { AdminHomeComponent } from './Components/admin-home/admin-home.component';
+import { CreateStudentComponent } from './Components/create-student/create-student.component';
+import { CreateNoticeComponent } from './Components/create-notice/create-notice.component';
+  
 
 
 const routes: Routes = [
@@ -28,6 +33,22 @@ const routes: Routes = [
   {
     path: 'faculty-login',
     component: FacultyLoginComponent
+  },
+  {
+    path: 'admin-panel',
+    component: AdminPanelComponent
+  },
+  {
+    path: 'admin-home',
+    component: AdminHomeComponent
+  },
+  {
+    path: 'create-student',
+    component: CreateStudentComponent
+  },
+  {
+    path: 'create-notice',
+    component: CreateNoticeComponent
   },
 ];
 

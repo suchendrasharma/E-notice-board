@@ -12,24 +12,24 @@ export class AdminService {
   }
 
   student(): Observable<User[]> {//
-    return this.api.get<any>('/student').pipe(map(res => res.data));
+    return this.api.get<any>('/student/login').pipe(map(res => res.data));
   }
 
-  faculty(): Observable<User[]> {//
-    return this.api.get<any>('/faculty').pipe(map(res => res.data));
-  }
-
-  // createCandidate(data: {
-  //   name: string,
-  //   student_number: number,
-  //   email: string,
-  //   phone_number: number,
-  //   branch: string,
-  //   gender: string,
-  //   hosteler: boolean
-  // }): Observable<User> {//
-  //   return this.api.post('/candidates', data);
+  // faculty(): Observable<User[]> {//
+  //   return this.api.get<any>('/faculty').pipe(map(res => res.data));
   // }
+
+  createCandidate(data: {
+    name: string,
+    student_number: number,
+    email: string,
+    phone_number: number,
+    branch: string,
+    gender: string,
+    hosteler: boolean
+  }): Observable<User> {//
+    return this.api.post('/candidates', data);
+  }
 
   createNotice(data: {
                    type: string,

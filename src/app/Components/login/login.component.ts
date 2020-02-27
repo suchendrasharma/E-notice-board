@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {UserService} from '../../services/user.service';
+import {UserService} from '../../Services/user.service';
+import { AdminService } from '../../Services/admin.service';
 import {Router} from '@angular/router';
+import { from } from 'rxjs';
+import { ApiService } from 'src/app/Services/api.service';
 
 
 @Component({
@@ -20,8 +23,8 @@ export class LoginComponent implements OnInit {
     constructor(private userService: UserService,
                 private router: Router) {
                   this.form=new FormGroup({
-                    rollNo: new FormControl(null,[Validators.required]),
-                    password: new FormControl(null,[Validators.required])
+                    uname: new FormControl(null,[Validators.required]),
+                    pass: new FormControl(null,[Validators.required])
                   })
     }
 
@@ -41,15 +44,15 @@ ngOnInit() {
     this.userService.login(data)
       .subscribe(res => {
         localStorage.setItem('auth_token', res.token);
-        //  if (res.user.role === 'faculty') 
+        //if (res.user.role === 'faculty') 
         
           this.router.navigate(['/noticeboard']);
           
         
-        //  else {
-        //    this.router.navigate(['/noticeboard']);
+          //else {
+            //this.router.navigate(['/noticeboard']);
 
-        //  }
+          //}
       }, error1 => {
         alert(this.errorMessage);
       });

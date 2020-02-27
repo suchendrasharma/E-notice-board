@@ -81,4 +81,4 @@ export class ExampleHttpDatabase {
 
     return this._httpClient.get<GithubApi>(requestUrl);
   }
-}
+};

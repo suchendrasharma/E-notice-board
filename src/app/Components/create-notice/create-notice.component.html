@@ -1,0 +1,31 @@
+<title>Create Question</title>
+
+<div class="container">
+
+  <form class="form" [formGroup]="form" (ngSubmit)="createQuestion()">
+
+    <mat-select placeholder="Category" [formControl]="controls.type">
+      <mat-option value="html">IT</mat-option>
+      <mat-option value="css">CS</mat-option>
+      <mat-option value="js">MECH</mat-option>
+      <mat-option value="nodejs">CIVIL</mat-option>
+      <mat-option value="sql">SQL</mat-option>-->
+      <mat-option value="aptitude">APTITUDE</mat-option>
+    </mat-select>
+    <hr>
+    <mat-form-field>
+      <textarea matInput class="inp" [formControl]="controls.question" placeholder="Question"></textarea>
+    </mat-form-field>
+    <hr>
+    <div formArrayName="options" *ngFor="let control of formData.controls, let i = index">
+      <div [formGroupName]="i">
+        <mat-radio-group formControlName="is_correct">
+          <mat-radio-button [value]=true><input type="text" class="inp" formControlName="title" placeholder="Title"
+                                                required/></mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+    <input class="submit inp" type="submit" value="Submit">
+  </form>
+</div>
+
