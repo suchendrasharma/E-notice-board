@@ -31,11 +31,11 @@ export class AdminService {
     return this.api.post('/candidates', data);
   }
 
-  createNotice(data: {
+  createQuestion(data: {
                    type: string,
-                   notice: string,
+                   qusetion: string,
                   //  options: { title: string, is_correct: boolean }[]
                  }): Observable<any> {
-    return this.api.post('/questions', data);
+    return this.api.post('/faculty/notice/create', data);
   }
 }

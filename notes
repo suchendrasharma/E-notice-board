@@ -1,0 +1,9 @@
+localhost:4000/dashboard
+localhost:4000/admin-panel
+localhost:4000/admin-home
+localhost:4000/create-notice
+localhost:4000/create-student
+localhost:4000/faculty-login
+localhost:4000/login
+localhost:4000/notice-table
+localhost:4000/noticeboard
